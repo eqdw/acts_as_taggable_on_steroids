@@ -4,7 +4,7 @@ class Tag < ActiveRecord::Base
   cattr_accessor :destroy_unused
   self.destroy_unused = false
 
-  attr_accessor :name
+  attr_accessible :name
 
   has_many :taggings, :dependent => :delete_all
 
